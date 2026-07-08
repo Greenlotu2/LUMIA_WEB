@@ -41,7 +41,7 @@ export default function Hero() {
       </section>
 
       {/* SECCIÓN 2: EL "NOSOTROS" */}
-      <section className="bg-neutral-50 border-y border-neutral-100 py-16">
+      <section className="bg-[#c8aa8c] border-y border-neutral-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             
@@ -50,7 +50,7 @@ export default function Hero() {
                 <Hammer className="w-6 h-6 stroke-[1.5]" />
               </div>
               <h3 className="text-lg font-bold text-neutral-900">Fabricación Propia</h3>
-              <p className="text-sm text-neutral-500 leading-relaxed">
+              <p className="text-sm text-white leading-relaxed">
                 Cada pieza nace en nuestro taller. Controlamos el corte de la madera y la soldadura del acero para garantizar acabados perfectos.
               </p>
             </div>
@@ -60,7 +60,7 @@ export default function Hero() {
                 <Ruler className="w-6 h-6 stroke-[1.5]" />
               </div>
               <h3 className="text-lg font-bold text-neutral-900">Ediciones Limitadas</h3>
-              <p className="text-sm text-neutral-500 leading-relaxed">
+              <p className="text-sm text-white leading-relaxed">
                 Al no producir en masa, nos enfocamos en optimizar constantemente nuestros 15 diseños exclusivos basados en la funcionalidad real de tu espacio.
               </p>
             </div>
@@ -70,7 +70,7 @@ export default function Hero() {
                 <ShieldCheck className="w-6 h-6 stroke-[1.5]" />
               </div>
               <h3 className="text-lg font-bold text-neutral-900">Garantía Estructural</h3>
-              <p className="text-sm text-neutral-500 leading-relaxed">
+              <p className="text-sm text-white leading-relaxed">
                 La combinación de metalurgia y carpintería de ensamble asegura que tus estanterías y repisas soporten peso real sin vencerse.
               </p>
             </div>

@@ -46,11 +46,11 @@ export default function LifestyleCarousel() {
         <span className="text-xs font-bold uppercase tracking-widest text-neutral-400 font-mono">
           Inspiración para tu hogar
         </span>
-        <h2 className="text-3xl font-black tracking-tight text-neutral-900">
-          Nuestros Muebles en Espacios Reales
+        <h2 className="text-3xl font-black tracking-tight text-white">
+          Nuestros Muebles En Tu Espacio
         </h2>
-        <p className="text-neutral-500 text-sm max-w-md">
-          Boceto visual de cómo lucirán las piezas integradas en diferentes ambientes.
+        <p className="text-white text-sm max-w-md">
+          Boceto visual de cómo lucirán las piezas en areas como tu lo requieras.
         </p>
       </div>
 

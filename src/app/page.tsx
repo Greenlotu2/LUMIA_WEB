@@ -3,7 +3,7 @@ import LifestyleCarousel from "../components/layout/LifestyleCarousel"; // cámb
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#293e57]">
       <Hero />
       <LifestyleCarousel />
     </main>

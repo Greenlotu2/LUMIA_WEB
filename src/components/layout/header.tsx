@@ -11,9 +11,9 @@ export default function Header() {
 
   // Categorías funcionales y específicas de tu nicho
   const navigation = [
-    { name: 'Produtos', href: '/categorias/repisas' },
-    { name: 'Nosotros', href: '/categorias/estanterias' },  
-    { name: 'Mesas de Centro', href: '/categorias/mesas-centro' },
+    { name: 'Produtos', href: '/categorias/Productos' },
+    { name: 'Nosotros', href: '/categorias/Nosotros' },  
+    { name: 'Cotizaciones', href: '/categorias/Cotizaciones' },
   ];
 
   return (
