@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/layout/header"; // Importamos tu nuevo Header
-import Footer from "../components/layout/footer"
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +20,7 @@ export default function RootLayout({
         {/* El Header se renderiza en la parte superior de toda la app */}
         <Header />
         {children}
-        <Footer />
+        
       </body>
     </html>
   );

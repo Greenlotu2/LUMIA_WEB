@@ -20,7 +20,7 @@ export default function Hero() {
             No creamos muebles comunes. Fabricamos repisas, estanterías y mesas de centro a medida con acero de alta resistencia y maderas seleccionadas.
           </p>
           <div className="pt-4">
-            <button className="bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-sm px-8 py-4 rounded-md transition-colors duration-200 tracking-wide uppercase">
+            <button onClick={() => { window.location.href = "/categorias/Productos"; }} className="bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-sm px-8 py-4 rounded-md transition-colors duration-200 tracking-wide uppercase" >
               Explorar los 15 Diseños
             </button>
           </div>

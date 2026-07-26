@@ -13,7 +13,7 @@ export default function NosotrosPage() {
           Detrás de Lumia
         </span>
         <h1 className="text-4xl font-black tracking-tight text-neutral-900 mt-2 uppercase">
-          Quiénes Somos
+          Quiénes Somos ?
         </h1>
         
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

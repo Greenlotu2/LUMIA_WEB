@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ShoppingBag, Search, User, Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import { SiMercadopago } from "react-icons/si";
+import { CiShoppingCart } from 'react-icons/ci';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,6 +15,7 @@ export default function Header() {
     { name: 'Produtos', href: '/categorias/Productos' },
     { name: 'Nosotros', href: '/categorias/Nosotros' },  
     { name: 'Cotizaciones', href: '/categorias/Cotizaciones' },
+    { name: 'Contacto', href: '/categorias/contacto' }
   ];
 
   return (
@@ -51,12 +53,12 @@ export default function Header() {
           {/* ICONOS DE CONVERSIÓN - Lo que acostumbra cualquier comprador en línea */}
           <div className="flex items-center justify-end space-x-5 text-neutral-700 flex-1 md:flex-none">
             {/* Buscador */}
-            <button className="p-2 hover:text-neutral-900 transition-colors duration-200" aria-label="Buscar">
-              <Search className="w-5 h-5 stroke-[2]" />
+            <button  onClick={() => window.location.href = "/carrito"} className="p-2 hover:text-neutral-900 transition-colors duration-200" aria-label="Lista de Compras">
+              <CiShoppingCart className="w-5 h-5 stroke-[2]" />
             </button>
 
             {/* Cuenta de Usuario */}
-            <button className="hidden sm:block p-2 hover:text-neutral-900 transition-colors duration-200" aria-label="Mi Cuenta">
+            <button onClick={() => window.location.href = "/perfil"} className="hidden sm:block p-2 hover:text-neutral-900 transition-colors duration-200" aria-label="Mi Cuenta">
               <User className="w-5 h-5 stroke-[2]" />
             </button>
 
