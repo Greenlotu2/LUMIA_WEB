@@ -63,7 +63,7 @@ export default function Header() {
             </button>
 
             {/* Carrito de Compras con indicador de productos */}
-            <button className="p-2 hover:text-neutral-900 transition-colors duration-200 relative" aria-label="Ver Mercado Libre">
+            <button onClick={() => window.location.href = "https://www.mercadolibre.com.mx/"} className="p-2 hover:text-neutral-900 transition-colors duration-200 relative" aria-label="Ver Mercado Libre">
   <SiMercadopago className="w-5 h-5" />
 </button>
 

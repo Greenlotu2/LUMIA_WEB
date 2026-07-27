@@ -8,6 +8,13 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+// En app/layout.tsx (App Router)
+export const metadata = {
+  title: 'Lumia - Muebles Industriales',
+  icons: {
+    icon: '/Icono_lumia.jpg', // o '/logo.png'
+  },
+};
 
 export default function RootLayout({
   children,
