@@ -59,7 +59,7 @@ export default function CotizacionesPage() {
 
   return (
     <div className="bg-[#F6F6F6] min-h-screen pb-24">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12">
         
         {/* ENCABEZADO */}
         <div className="text-center md:text-left mb-10 space-y-2">
@@ -90,7 +90,7 @@ export default function CotizacionesPage() {
         )}
 
         {/* FORMULARIO CONTENEDOR */}
-        <div className="bg-white border border-neutral-200/60 rounded-xl shadow-sm p-6 sm:p-10">
+        <div className="bg-white border border-neutral-200/60 rounded-xl shadow-sm p-5 sm:p-8 lg:p-10">
           <form onSubmit={handleSubmit} className="space-y-6">
             
             {/* Fila 1: Nombre */}
@@ -111,7 +111,7 @@ export default function CotizacionesPage() {
             </div>
 
             {/* Fila 2: Correo y Teléfono */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label htmlFor="correo" className="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">
                   Correo Electrónico *

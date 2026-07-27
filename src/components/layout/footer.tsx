@@ -6,8 +6,8 @@ import { Mail, MessageSquare } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 text-neutral-400 border-t border-neutral-800 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+    <footer className="bg-neutral-900 text-neutral-400 border-t border-neutral-800 py-10 sm:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 items-center">
         
         {/* Columna 1: Identidad Corta */}
         <div className="text-center md:text-left space-y-2">

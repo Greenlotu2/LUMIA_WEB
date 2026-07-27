@@ -28,7 +28,7 @@ export default function ContactoPage() {
   const estadosCobertura = ['Puebla', 'Tlaxcala', 'Morelos', 'Veracruz'];
 
   return (
-    <main className="min-h-screen bg-white text-white px-6 py-12 lg:py-20 max-w-7xl mx-auto">
+    <main className="min-h-screen bg-white text-white px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-20 max-w-7xl mx-auto">
       {/* Encabezado */}
       <header className="mb-12 text-center lg:text-left">
         <span className="text-xs font-mono uppercase tracking-widest text-amber-500 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
@@ -42,7 +42,7 @@ export default function ContactoPage() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-16 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 items-start">
         {/* ==========================================
             COLUMNA IZQUIERDA: CANALES Y REDES
            ========================================== */}
@@ -87,7 +87,7 @@ export default function ContactoPage() {
               Descubre nuestros procesos de fabricación, nuevos lanzamientos y proyectos entregados:
             </p>
 
-            <div className="grid grid-cols-3 gap-3 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
               {/* Instagram */}
               <a
                 href="https://instagram.com/tu_usuario"

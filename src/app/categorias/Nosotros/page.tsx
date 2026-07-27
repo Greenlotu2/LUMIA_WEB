@@ -8,7 +8,7 @@ export default function NosotrosPage() {
     <div className="bg-[#F6F6F6] min-h-screen">
       
       {/* SECCIÓN 1: CABECERA / QUIÉNES SOMOS */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 text-center md:text-left">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 pb-10 sm:pb-12 text-center md:text-left">
         <span className="text-xs font-bold uppercase tracking-widest text-neutral-400 font-mono">
           Detrás de Lumia
         </span>
@@ -16,7 +16,7 @@ export default function NosotrosPage() {
           Quiénes Somos ?
         </h1>
         
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           <div className="space-y-6 text-neutral-600 leading-relaxed">
             <p className="text-lg font-medium text-neutral-900">
               Somos un estudio-taller dedicado a la conceptualización y fabricación de mobiliario estructural de alta resistencia.
@@ -41,7 +41,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* SECCIÓN 2: LA ALTERNATIVA A MISIÓN Y VISIÓN (FILOSOFÍA DE MARCA) */}
-      <section className="bg-white border-y border-neutral-200/60 py-16 mt-8">
+      <section className="bg-white border-y border-neutral-200/60 py-12 sm:py-16 mt-6 sm:mt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             
@@ -80,7 +80,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* SECCIÓN 3: COMPROMISO INDUSTRIAL */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         <div className="bg-white p-8 rounded-xl border border-neutral-200/60 flex gap-4 items-start shadow-sm">
           <div className="p-3 bg-neutral-100 rounded-full text-neutral-800 shrink-0">
             <Hammer className="w-6 h-6" />

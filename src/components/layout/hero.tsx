@@ -7,12 +7,12 @@ export default function Hero() {
   return (
     <div className="bg-white">
       {/* SECCIÓN 1: BIENVENIDA (HERO) */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 pb-14 sm:pb-20 md:py-24 lg:py-32 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
         <div className="space-y-6 text-center md:text-left">
           <span className="text-xs font-bold uppercase tracking-widest text-neutral-400">
             Taller de Diseño Estructural
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-neutral-900 leading-[1.1]">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tight text-neutral-900 leading-[1.1]">
             Geometría <br />
             <span className="text-neutral-500 font-light">y Función.</span>
           </h1>
@@ -20,30 +20,30 @@ export default function Hero() {
             No creamos muebles comunes. Fabricamos repisas, estanterías y mesas de centro a medida con acero de alta resistencia y maderas seleccionadas.
           </p>
           <div className="pt-4">
-            <button onClick={() => { window.location.href = "/categorias/Productos"; }} className="bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-sm px-8 py-4 rounded-md transition-colors duration-200 tracking-wide uppercase" >
+            <button onClick={() => { window.location.href = "/categorias/Productos"; }} className="w-full sm:w-auto bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-sm px-8 py-4 rounded-md transition-colors duration-200 tracking-wide uppercase" >
               Explorar los 15 Diseños
             </button>
           </div>
         </div>
 
         {/* Contenedor de imagen principal */}
-        <div className="relative aspect-[4/5] md:aspect-square w-full bg-neutral-100 rounded-lg overflow-hidden group">
-          <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
-            alt="Mobiliario Industrial Lumia"
-            className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-103"
-          />
-          <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-4 rounded border border-neutral-100 hidden sm:block">
-            <p className="text-xs font-mono text-neutral-500">Modelo en foto:</p>
-            <p className="text-sm font-bold text-neutral-900">Estantería Estructural N1</p>
-          </div>
-        </div>
+        <div className="relative aspect-[4/5] md:aspect-square w-full bg-neutral-200 rounded-lg overflow-hidden group">
+  <img
+    src="/muebles/mueble_en_entornos/1.png"
+    alt="Mobiliario Industrial Lumia"
+    className="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-105 p-2"
+  />
+  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-4 rounded border border-neutral-100 hidden sm:block">
+    <p className="text-xs font-mono text-neutral-500">Modelo en foto:</p>
+    <p className="text-sm font-bold text-neutral-900">Estantería Estructural N1</p>
+  </div>
+</div>
       </section>
 
       {/* SECCIÓN 2: EL "NOSOTROS" */}
-      <section className="bg-[#c8aa8c] border-y border-neutral-100 py-16">
+      <section className="bg-[#c8aa8c] border-y border-neutral-100 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
             
             <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-3">
               <div className="p-3 bg-white rounded-full shadow-sm border border-neutral-100 text-neutral-800">

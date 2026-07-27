@@ -79,7 +79,7 @@ export default function CarritoPage() {
   };
 
   return (
-    <main className="min-h-screen bg-white text-white px-6 py-12 lg:py-5 max-w-7xl mx-auto">
+    <main className="min-h-screen bg-white text-white px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-5 max-w-7xl mx-auto">
       {/* Botón de Regreso */}
       <div className="mb-1">
         <Link
@@ -91,7 +91,7 @@ export default function CarritoPage() {
       </div>
 
       {/* Encabezado */}
-      <header className="mb-10 pb-6 border-b border-neutral-800 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <header className="mb-10 pb-6 border-b border-neutral-300 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <span className="text-xs font-mono uppercase tracking-widest text-amber-500 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
             Resumen de Selección
@@ -107,8 +107,8 @@ export default function CarritoPage() {
 
       {items.length === 0 ? (
         /* ESTADO VACÍO */
-        <div className="p-16 bg-[#D3D3D3] border border-neutral-800 rounded-2xl text-center flex flex-col items-center gap-4">
-          <div className="w-16 h-16 bg-neutral-900 border border-neutral-800 rounded-full flex items-center justify-center text-neutral-600">
+        <div className="p-8 sm:p-12 lg:p-16 bg-[#E8E8E8] border border-neutral-300 rounded-2xl text-center flex flex-col items-center gap-4">
+          <div className="w-16 h-16 bg-neutral-800/90 border border-neutral-300 rounded-full flex items-center justify-center text-neutral-100">
             <Trash2 className="w-8 h-8" />
           </div>
           <h2 className="text-xl font-bold text-black">Tu lista está vacía</h2>
@@ -124,17 +124,17 @@ export default function CarritoPage() {
         </div>
       ) : (
         /* CONTENIDO CON ITEMS */
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 xl:gap-12 items-start">
           
           {/* LISTADO DE PRODUCTOS */}
           <div className="lg:col-span-2 flex flex-col gap-4">
             {items.map((item) => (
               <div
                 key={item.id}
-                className="p-5 bg-[#D3D3D3] border border-neutral-800 rounded-2xl flex flex-col sm:flex-row items-center gap-6 hover:border-neutral-700 transition-all"
+                className="p-4 sm:p-5 bg-[#F1F1F1] border border-neutral-300 rounded-2xl flex flex-col sm:flex-row items-center gap-4 sm:gap-6 hover:border-neutral-400 transition-all"
               >
                 {/* Visualización / Imagen del mueble */}
-                <div className="w-full sm:w-28 h-28 bg-neutral-900 rounded-xl border border-neutral-800 overflow-hidden relative flex-shrink-0">
+                <div className="w-full sm:w-28 h-28 bg-neutral-100 rounded-xl border border-neutral-300 overflow-hidden relative flex-shrink-0">
                 <Image
                     src={item.imagen}
                     alt={item.nombre}
@@ -157,11 +157,11 @@ export default function CarritoPage() {
                 </div>
 
                 {/* Controles de Cantidad y Eliminación */}
-                <div className="flex sm:flex-col items-center justify-between sm:justify-center gap-4 w-full sm:w-auto pt-4 sm:pt-0 border-t sm:border-t-0 border-neutral-800">
-                  <div className="flex items-center bg-neutral-900 border border-neutral-800 rounded-xl p-1">
+                <div className="flex sm:flex-col items-center justify-between sm:justify-center gap-4 w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-t-0 border-neutral-300">
+                  <div className="flex items-center bg-neutral-200 border border-neutral-300 rounded-xl p-1">
                     <button
                       onClick={() => actualizarCantidad(item.id, -1)}
-                      className="p-1.5 text-neutral-400 hover:text-white transition-colors"
+                      className="p-1.5 text-neutral-700 hover:text-black transition-colors"
                       aria-label="Disminuir cantidad"
                     >
                       <Minus className="w-3.5 h-3.5" />
@@ -189,8 +189,8 @@ export default function CarritoPage() {
           </div>
 
           {/* TARJETA DE RESUMEN Y ENVÍO */}
-          <div className="bg-[#D3D3D3] border border-neutral-800 p-8 rounded-2xl flex flex-col gap-6 sticky top-24">
-            <h2 className="text-xl font-bold text-black border-b border-neutral-800 pb-4">
+          <div className="bg-[#F2F2F2] border border-neutral-300 p-5 sm:p-6 lg:p-8 rounded-2xl flex flex-col gap-6 sticky top-20 sm:top-24">
+            <h2 className="text-xl font-bold text-black border-b border-neutral-300 pb-4">
               Resumen de Pedido
             </h2>
 
@@ -203,15 +203,15 @@ export default function CarritoPage() {
                 <span>Flete / Entrega</span>
                 <span className="text-amber-500 font-bold">Por cotizar</span>
               </div>
-              <div className="border-t border-neutral-800 pt-3 mt-1 flex justify-between text-sm font-bold text-black">
+              <div className="border-t border-neutral-300 pt-3 mt-1 flex justify-between text-sm font-bold text-black">
                 <span>Total Estimado</span>
                 <span className="text-black font-mono text-base">${subtotal.toLocaleString('es-MX')} MXN</span>
               </div>
             </div>
 
             {/* Beneficios clave */}
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4 flex flex-col gap-2 font-mono text-[11px] text-neutral-400">
-              <div className="flex items-center gap-2 text-white">
+            <div className="bg-neutral-100 border border-neutral-300 rounded-xl p-4 flex flex-col gap-2 font-mono text-[11px] text-neutral-700">
+              <div className="flex items-center gap-2 text-neutral-900">
                 <Truck className="w-4 h-4 text-amber-500" />
                 <span>Cobertura directa: Puebla, Tlaxcala, Morelos y Veracruz.</span>
               </div>

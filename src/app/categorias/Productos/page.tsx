@@ -23,14 +23,13 @@ export default function ProductosPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-white text-white px-6 py-12 max-w-7xl mx-auto">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold tracking-tight text-black">Catálogo Industrial</h1>
+    <main className="min-h-screen bg-white text-white px-4 sm:px-6 lg:px-8 py-10 sm:py-12 max-w-7xl mx-auto">
+      <header className="mb-8 sm:mb-12">
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-black">Catálogo Industrial</h1>
         <p className="text-neutral-400 mt-2 font-mono text-sm">
           Explora nuestros 15 modelos de edición limitada.
         </p>
 
-        {/* Filtros por Categoría */}
         <div className="flex flex-wrap gap-2 mt-6">
           {categories.map((cat) => (
             <button
@@ -49,7 +48,7 @@ export default function ProductosPage() {
       </header>
 
       {/* Cuadrícula de Productos */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
         {filteredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

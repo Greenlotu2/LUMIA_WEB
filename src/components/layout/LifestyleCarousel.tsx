@@ -4,28 +4,27 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Eye } from 'lucide-react';
 
-// Datos ficticios para el boceto del carrusel
 const slides = [
   {
     id: 1,
-    title: 'Estanterías que optimizan tu espacio',
-    description: 'Estructuras geométricas diseñadas para dar vida a tus muros y organizar tus libros u objetos favoritos.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    tag: 'Estudio Urbano'
+    title: 'Elegancia Geométrica en Tu Estancia',
+    description: 'Mesas de centro con cubiertas de cristal templado y estructuras de acero con diseño arquitectónico único.',
+    image: '/muebles/mueble_en_entornos/2.png',
+    tag: 'Salas de Estar'
   },
   {
     id: 2,
-    title: 'Acentos mínimos en tu pared',
-    description: 'Nuestras repisas flotantes combinan la calidez de la madera sólida con la rigidez del acero industrial.',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80',
-    tag: 'Salas Reducidas'
+    title: 'Harmonía e Iluminación Integral',
+    description: 'Libreros de gran escala y repisas flotantes que transforman muros completos con madera cálida y herrería mate.',
+    image: '/muebles/mueble_en_entornos/3.png',
+    tag: 'Espacios Abiertos'
   },
   {
     id: 3,
-    title: 'El centro de tus reuniones',
-    description: 'Mesas de centro de herrería artesanal que se convierten en la pieza clave de tu decoración.',
-    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80',
-    tag: 'Zonas de Convivencia'
+    title: 'Versatilidad y Acentos Móviles',
+    description: 'Estanterías curvas con rodamiento suave y mesas auxiliares tipo nido pensadas para optimizar cada rincón.',
+    image: '/muebles/mueble_en_entornos/4.png',
+    tag: 'Rincones Mínimos'
   }
 ];
 
@@ -41,21 +40,21 @@ export default function LifestyleCarousel() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="mb-8 text-center md:text-left space-y-2">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div className="mb-6 sm:mb-8 text-center md:text-left space-y-2">
         <span className="text-xs font-bold uppercase tracking-widest text-neutral-400 font-mono">
           Inspiración para tu hogar
         </span>
         <h2 className="text-3xl font-black tracking-tight text-white">
           Nuestros Muebles En Tu Espacio
         </h2>
-        <p className="text-white text-sm max-w-md">
-          Boceto visual de cómo lucirán las piezas en areas como tu lo requieras.
+        <p className="text-neutral-300 text-sm max-w-md">
+          Boceto visual de cómo lucirán las piezas en áreas como tú lo requieras.
         </p>
       </div>
 
-      {/* Contenedor Principal del Carrusel */}
-      <div className="relative h-[450px] sm:h-[550px] w-full rounded-xl overflow-hidden bg-neutral-900 shadow-xl group">
+      {/* Contenedor adaptado al ratio 4:3 de tus fotos */}
+      <div className="relative aspect-[4/3] max-h-[600px] w-full rounded-2xl overflow-hidden bg-neutral-950 shadow-2xl group border border-neutral-800">
         
         {/* Imágenes Animadas con Framer Motion */}
         <AnimatePresence mode="wait">
@@ -64,11 +63,12 @@ export default function LifestyleCarousel() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             className="absolute inset-0 w-full h-full"
           >
-            {/* Capa oscura encima de la foto para mejorar la legibilidad del texto */}
-            <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/30 to-transparent z-10" />
+            {/* Degradado para rescatar legibilidad de texto sobre la foto */}
+            <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent z-10 pointer-events-none" />
+            
             <img
               src={slides[currentIndex].image}
               alt={slides[currentIndex].title}
@@ -78,31 +78,31 @@ export default function LifestyleCarousel() {
         </AnimatePresence>
 
         {/* Textos y Contenido Encima del Carrusel */}
-        <div className="absolute inset-x-0 bottom-0 z-20 p-6 sm:p-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div className="space-y-3 max-w-xl text-white">
-            <span className="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3 py-1 rounded text-xs font-medium tracking-wide border border-white/10 uppercase">
+        <div className="absolute inset-x-0 bottom-0 z-20 p-5 sm:p-8 lg:p-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6">
+          <div className="space-y-2.5 max-w-xl text-white">
+            <span className="inline-flex items-center gap-1.5 bg-neutral-900/80 backdrop-blur-md px-3 py-1 rounded-md text-xs font-medium tracking-wide border border-neutral-700/50 uppercase text-amber-400">
               <Eye className="w-3.5 h-3.5" /> {slides[currentIndex].tag}
             </span>
-            <h3 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight leading-tight drop-shadow-md">
               {slides[currentIndex].title}
             </h3>
-            <p className="text-sm sm:text-base text-neutral-200/90 font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-neutral-200 font-light leading-relaxed drop-shadow">
               {slides[currentIndex].description}
             </p>
           </div>
 
-          {/* Botones de Navegación del Carrusel */}
+          {/* Botones de Navegación */}
           <div className="flex gap-3 self-start md:self-auto z-30">
             <button
               onClick={prevSlide}
-              className="p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-full border border-white/10 transition-colors duration-200"
+              className="p-3 bg-neutral-900/80 hover:bg-neutral-800 text-white rounded-full border border-neutral-700/60 transition-colors duration-200 backdrop-blur-sm"
               aria-label="Anterior escenario"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
-              className="p-3 bg-white hover:bg-neutral-100 text-neutral-900 rounded-full shadow-md transition-colors duration-200"
+              className="p-3 bg-amber-500 hover:bg-amber-400 text-neutral-950 rounded-full shadow-md font-bold transition-colors duration-200"
               aria-label="Siguiente escenario"
             >
               <ChevronRight className="w-5 h-5" />
@@ -110,13 +110,14 @@ export default function LifestyleCarousel() {
           </div>
         </div>
 
-        {/* Indicadores de posición (Líneas finas abajo al centro) */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {/* Indicadores de posición inferiores */}
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-2">
           {slides.map((_, index) => (
-            <div
+            <button
               key={index}
-              className={`h-1 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'w-8 bg-white' : 'w-2 bg-white/40'
+              onClick={() => setCurrentIndex(index)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                index === currentIndex ? 'w-8 bg-amber-500' : 'w-2 bg-white/40 hover:bg-white/60'
               }`}
             />
           ))}

@@ -34,7 +34,7 @@ export default function ProductDetailPage({ params }: Props) {
   );
 
   return (
-    <main className="min-h-screen bg-white text-white px-6 py-12 lg:py-20 max-w-7xl mx-auto">
+    <main className="min-h-screen bg-white text-white px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-20 max-w-7xl mx-auto">
       {/* Botón de regresar */}
       <Link
         href="/categorias/Productos"
@@ -43,14 +43,14 @@ export default function ProductDetailPage({ params }: Props) {
         <ArrowLeft className="w-4 h-4" /> Volver al catálogo completo
       </Link>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-16 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 items-start">
         
         {/* ==========================================
             COLUMNA IZQUIERDA: GALERÍA DE IMÁGENES
            ========================================== */}
         <div className="flex flex-col gap-4 w-full">
           {/* Visor Principal */}
-          <div className="relative aspect-square w-full bg-white rounded-2xl p-8 flex items-center justify-center border border-black overflow-hidden group">
+          <div className="relative aspect-square w-full bg-white rounded-2xl p-4 sm:p-6 lg:p-8 flex items-center justify-center border border-black overflow-hidden group">
             <img
               src={images[selectedImageIndex]}
               alt={`${product.name} - Imagen ${selectedImageIndex + 1}`}
@@ -80,12 +80,12 @@ export default function ProductDetailPage({ params }: Props) {
 
           {/* Miniaturas de Selección */}
           {images.length > 1 && (
-            <div className="flex gap-3 overflow-x-auto pb-2">
+            <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory">
               {images.map((img, idx) => (
                 <button
                   key={idx}
                   onClick={() => setSelectedImageIndex(idx)}
-                  className={`relative w-20 h-20 rounded-xl bg-neutral-900 border p-2 flex-shrink-0 flex items-center justify-center transition-all ${
+                  className={`relative w-20 h-20 rounded-xl bg-neutral-900 border p-2 flex-shrink-0 flex items-center justify-center transition-all snap-start ${
                     selectedImageIndex === idx
                       ? 'border-amber-500 ring-2 ring-amber-500/20'
                       : 'border-neutral-800 opacity-60 hover:opacity-100'
@@ -142,7 +142,7 @@ export default function ProductDetailPage({ params }: Props) {
           </div>
 
           {/* Llamados a la Acción (CTAs) */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-2">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
             <a
               href={`https://wa.me/521234567890?text=${whatsappMessage}`}
               target="_blank"
